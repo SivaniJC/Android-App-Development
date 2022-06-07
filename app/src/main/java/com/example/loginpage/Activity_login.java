@@ -38,7 +38,7 @@ public class Activity_login extends AppCompatActivity implements View.OnClickLis
 
         if(user.equals(user1)&&pass.equals(pass1))
         {
-            Toast.makeText(this,"Login Success", Toast.LENGTH_LONG).show();
+            Toast.makeText(getBaseContext(),"Login Success", Toast.LENGTH_LONG).show();
         }
         else
         {
@@ -49,7 +49,7 @@ public class Activity_login extends AppCompatActivity implements View.OnClickLis
             }
             else
             {
-                Toast.makeText(this,"Login Failed"+count, Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(),"Login Failed"+count, Toast.LENGTH_LONG).show();
             }
         }
     }
