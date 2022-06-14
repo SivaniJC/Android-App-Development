@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.Random;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -42,27 +43,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         {
             try {
                 WallpaperManager wallpaperManager=WallpaperManager.getInstance(getBaseContext());
-                if(i==12)
-                    i=1;
-                if(i==11)
-                    i=2;
-                if(i==10)
-                    i=3;
-                if(i==9)
-                    i=4;
-                if(i==8)
-                    i=9;
-                if(i==7)
-                    i=8;
-                if(i==6)
-                    i=7;
-                if(i==5)
-                    i=6;
-                if(i==4)
-                    i=5;
-
-                wallpaperManager.setBitmap(BitmapFactory.decodeResource(getResources(),imagesArray[i]));
-                i++;
+                Random random = new Random();
+                wallpaperManager.setBitmap(BitmapFactory.decodeResource(getResources(),imagesArray[random.nextInt(12)]));
             }
             catch(Exception e)
             {
