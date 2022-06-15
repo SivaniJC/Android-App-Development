@@ -34,13 +34,8 @@ public class activity_login extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         String user1 = txtLoginUsername.getText().toString();
         String pass1 = txtLoginPassword.getText().toString();
-
-        System.out.println(user1);
-        System.out.println(pass1);
-
         if(user.equals(user1)&&pass.equals(pass1))
         {
-            System.out.println("login success");
             Toast.makeText(getBaseContext(),"Login Success", Toast.LENGTH_LONG).show();
         }
         else
